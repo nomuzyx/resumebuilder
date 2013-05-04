@@ -8,18 +8,24 @@
 </head>
 <body>
 <?php
-//include 'mysqlcon.php';
+include 'mysqlcon.php';
+
 ?>
 <div class="container">
 	<div class ="row">
 		<div class="span12">
-			<form class="form-horizontal" enctype="multipart/form-data">
+			<form class="form-horizontal" action = "insert.php" method = "post" enctype="multipart/form-data">
 				<div class ="row" style="background-color:tan; margin:1%">
 					<div class="span12">
 						<strong>Personal Details</strong></p>
 					</div>	
 				</div>
-
+				<div class="control-group">
+  					<label class="control-label" for="resumeid">Resume ID</label>
+    				<div class="controls">
+     					<input type="text" id="resumeid" name="resumeid" class = "span3" placeholder="Resume ID" readonly>
+    				</div>
+  				</div>
   				<div class="control-group">
   					<label class="control-label" for="fname">First Name</label>
     				<div class="controls">
@@ -89,7 +95,7 @@
   				<div class="control-group">
   					<label class="control-label" for="file">Upload a Photo</label>
     				<div class="controls">
-     					<input type="file" name="file" id="file"><br>
+     					<input type="file" name="file" id="file">
     				</div>
   				</div>		
   				<div class ="row" style="background-color:tan; margin:1%">
@@ -154,7 +160,13 @@
     				<div class="controls">
      					<textarea id="workexp" name="workexp" class = "span6" rows="10"></textarea>
     				</div>
-  				</div>		
+  				</div>	
+  				<div class="control-group">
+  					<label class="control-label" for="submit"></label>
+    				<div class="controls">
+     					<button type = "submit" class = "btn btn-success" id="submit" name="submit">Submit</button>
+    				</div>
+  				</div>	
 			</form>
 
 		</div>	
